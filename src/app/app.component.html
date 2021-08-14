@@ -1,0 +1,134 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel">
+        <div class="panel-heading">
+          <h5 class="hithere">hi there!</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-2">
+      <img class="me" src="../assets/img/programmer.webp" alt="Avatar" style="width:200px">
+    </div>
+    <div class="col-md-10">
+      <h3 class="im">I'm Krzysztof Dylewski</h3>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="intro">
+        <span style="color: #ffb347 ">var</span>&nbsp;<span style="color: #63AFA0 ">aboutme</span>&nbsp;<span
+          style="color: whitesmoke ">=</span>&nbsp;<span style="color: #A5E5A6 ">""</span><span
+          style="color: whitesmoke ">;</span>
+      </h3>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="intro"><span style="color: #5057AB">this.</span><span style="color: #63AFA0">aboutme</span>&nbsp;<span
+          style="color: whitesmoke ">=</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
+          style="color: #A5E5A6 ">"I am a Full Stack developer having 7+ years of website
+          development, database experience. I have done projects for
+          various clients under various domains like logistics, real
+          estate, eCommerce, fintech, Saas, etc."</span><span style="color: whitesmoke">;</span>
+      </h3>
+    </div>
+
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="intro"><span style="color: #ffb347 ">var</span>&nbsp;<span
+          style="color: #63AFA0 ">skills</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
+          style="color: #A5E5A6 ">[]</span><span style="color: whitesmoke">;</span></h3>
+    </div>
+    <div class="col-md-12">
+      <h3 class="intro"><span style="color: #5057AB">this.</span><span style="color: #63AFA0">skills</span>&nbsp;<span
+          style="color: whitesmoke ">=</span>&nbsp;<span style="color: #A5E5A6 ">[ "HTML/HTML5", "CSS", "JavaScript",
+          "Angular.js", "React.js", "Vue.js", "Node.js", "Jquery", "Jquery UI" ]</span><span
+          style="color: whitesmoke">;</span> </h3>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="intro"><span style="color: #ffb347 ">var</span>&nbsp;<span
+          style="color: #63AFA0 ">education</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
+          style="color: #A5E5A6 ">[]</span><span style="color: whitesmoke">;</span></h3>
+    </div>
+
+    <div class="col-md-12">
+      <h3 class="intro"><span style="color: #5057AB">this.</span><span
+          style="color: #63AFA0">education</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
+          style="color: #A5E5A6 ">[ "WARSAW UNIVERSITY OF TECHNOLOGY", "BACHELOR'S DEGREE IN COMPUTER SCIENCE",
+          "2006-2011" ]</span><span style="color: whitesmoke">;</span> </h3>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="intro"><span style="color: #ffb347 ">var</span>&nbsp;<span
+          style="color: #63AFA0 ">experiences</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
+          style="color: #A5E5A6 ">[]</span><span style="color: whitesmoke">;</span></h3>
+    </div>
+
+    <div class="col-md-12" *ngFor="let exp of experiences">
+      <h3 class="intro"><span style="color: #5057AB">this.</span><span style="color: #63AFA0">experiences</span><span
+          style="color: #B9B540 ">.push</span><span style="color: whitesmoke ">(</span><span
+          style="color: #A5E5A6 "><span class="company" (click)="viewJD(exp.expId)" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop" style="cursor:pointer">"{{exp.company}}",</span> "{{exp.title}}",
+          "{{exp.year}}"</span><span style="color: whitesmoke ">)</span><span style="color: whitesmoke">;</span> </h3>
+      <br>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="contactme">
+        <a class="socials" href="https://github.com/cmtania" target="_blank"> <i class="fab fa-github"></i></a>&nbsp;
+        <a class="socials" href="https://www.linkedin.com/in/taniachristian/" target="_blank"><i class="fab fa-linkedin"></i></a>&nbsp;
+        <a class="socials" href="https://github.com/cmtania" target="_blank"><i class="fab fa-twitter"></i></a>&nbsp;
+        <a class="socials" href="https://github.com/cmtania" target="_blank"><i class="fas fa-envelope"></i></a>&nbsp;
+        <a class="socials" href="https://github.com/cmtania" target="_blank"><i class="fab fa-instagram"></i></a>
+      </h3>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">{{selectedExp.company}} | {{selectedExp.title}} |
+          {{selectedExp.year}}</h5>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-dark" role="alert" *ngFor="let jd of selectedExp.jd">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+          </svg>
+          {{jd}}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn close" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path
+      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+  </symbol>
+</svg>
