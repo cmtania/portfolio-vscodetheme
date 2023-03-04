@@ -14,76 +14,80 @@
       <img class="me" src="../assets/img/programmer.webp" alt="Avatar" style="width:200px">
     </div>
     <div class="col-md-10">
-      <h3 class="im">I'm Krzysztof Dylewski</h3>
+      <h3 class="im">I'm {{myFullName}}</h3>
     </div>
   </div>
   <hr>
   <div class="row">
     <div class="col-md-12">
       <h3 class="intro">
-        <span style="color: #ffb347 ">var</span>&nbsp;<span style="color: #63AFA0 ">aboutme</span>&nbsp;<span
-          style="color: whitesmoke ">=</span>&nbsp;<span style="color: #A5E5A6 ">""</span><span
-          style="color: whitesmoke ">;</span>
-      </h3>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <h3 class="intro"><span style="color: #5057AB">this.</span><span style="color: #63AFA0">aboutme</span>&nbsp;<span
-          style="color: whitesmoke ">=</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
-          style="color: #A5E5A6 ">"I am a Full Stack developer having 7+ years of website
-          development, database experience. I have done projects for
-          various clients under various domains like logistics, real
-          estate, eCommerce, fintech, Saas, etc."</span><span style="color: whitesmoke">;</span>
+        <span style="color: #ffb347">SUMMARY</span>
       </h3>
     </div>
-
   </div>
-  <hr>
   <div class="row">
     <div class="col-md-12">
-      <h3 class="intro"><span style="color: #ffb347 ">var</span>&nbsp;<span
-          style="color: #63AFA0 ">skills</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
-          style="color: #A5E5A6 ">[]</span><span style="color: whitesmoke">;</span></h3>
-    </div>
-    <div class="col-md-12">
-      <h3 class="intro"><span style="color: #5057AB">this.</span><span style="color: #63AFA0">skills</span>&nbsp;<span
-          style="color: whitesmoke ">=</span>&nbsp;<span style="color: #A5E5A6 ">[ "HTML/HTML5", "CSS", "JavaScript",
-          "Angular.js", "React.js", "Vue.js", "Node.js", "Jquery", "Jquery UI" ]</span><span
-          style="color: whitesmoke">;</span> </h3>
+      <h3 class="intro">
+          <span style="color: #A5E5A6 "> {{aboutMe}}</span>
+      </h3>
     </div>
   </div>
   <hr>
   <div class="row">
     <div class="col-md-12">
-      <h3 class="intro"><span style="color: #ffb347 ">var</span>&nbsp;<span
-          style="color: #63AFA0 ">education</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
-          style="color: #A5E5A6 ">[]</span><span style="color: whitesmoke">;</span></h3>
+      <h3 class="intro"><span style="color: #ffb347 ">SKILLS</span>
+      </h3>
     </div>
-
     <div class="col-md-12">
-      <h3 class="intro"><span style="color: #5057AB">this.</span><span
-          style="color: #63AFA0">education</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
-          style="color: #A5E5A6 ">[ "WARSAW UNIVERSITY OF TECHNOLOGY", "BACHELOR'S DEGREE IN COMPUTER SCIENCE",
-          "2006-2011" ]</span><span style="color: whitesmoke">;</span> </h3>
+      <h3 class="intro"><span style="color: #5057AB">Programming Languages: </span>
+        <span style="color: #A5E5A6 ">{{skills.ProgrammingLanguages}}</span>
+      </h3>
+      <h3 class="intro"><span style="color: #5057AB">Frameworks: </span>
+        <span style="color: #A5E5A6 ">{{skills.Frameworks}}</span>
+      </h3>
+      <h3 class="intro"><span style="color: #5057AB">Cloud Platforms: </span>
+        <span style="color: #A5E5A6 ">{{skills.CloudPlatforms}}</span>
+      </h3>
+      <h3 class="intro"><span style="color: #5057AB">Frameworks: </span>
+        <span style="color: #A5E5A6 ">{{skills.Frameworks}}</span>
+      </h3>
+      <h3 class="intro"><span style="color: #5057AB">Database: </span>
+        <span style="color: #A5E5A6 ">{{skills.Database}}</span>
+      </h3>
     </div>
   </div>
   <hr>
   <div class="row">
     <div class="col-md-12">
-      <h3 class="intro"><span style="color: #ffb347 ">var</span>&nbsp;<span
-          style="color: #63AFA0 ">experiences</span>&nbsp;<span style="color: whitesmoke ">=</span>&nbsp;<span
-          style="color: #A5E5A6 ">[]</span><span style="color: whitesmoke">;</span></h3>
+      <h3 class="intro"><span style="color: #ffb347 ">EXPERIENCE</span></h3>
     </div>
+    <div class="col-md-12">
+      <h3 class="intro" *ngFor="let exp of experiences">
+        <span class="company" style="color: #5057AB" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" style="cursor:pointer" (click)="view(exp.ExperienceID, 1)">{{exp.Title}},</span>
+        <span style="color: #63AFA0"> {{exp.Company}} {{exp.Year}}</span>
+        <br/>
+        <!-- <span style="color: #A5E5A6" *ngFor="let item of exp.jd">
+          {{item}} <br/>
+        </span> -->
+      </h3>
+    </div>
+  </div>
 
-    <div class="col-md-12" *ngFor="let exp of experiences">
-      <h3 class="intro"><span style="color: #5057AB">this.</span><span style="color: #63AFA0">experiences</span><span
-          style="color: #B9B540 ">.push</span><span style="color: whitesmoke ">(</span><span
-          style="color: #A5E5A6 "><span class="company" (click)="viewJD(exp.expId)" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop" style="cursor:pointer">"{{exp.company}}",</span> "{{exp.title}}",
-          "{{exp.year}}"</span><span style="color: whitesmoke ">)</span><span style="color: whitesmoke">;</span> </h3>
-      <br>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="intro"><span style="color: #ffb347 ">FREELANCE</span></h3>
+    </div>
+    <div class="col-md-12">
+      <h3 class="intro" *ngFor="let exp of freelances">
+        <span class="company" style="color: #5057AB" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" style="cursor:pointer" (click)="view(exp.ExperienceID, 2)">{{exp.Title}},</span>
+        <span style="color: #63AFA0"> {{exp.Company}} {{exp.Year}}</span>
+        <!-- <span style="color: #A5E5A6" *ngFor="let item of exp.jd">
+          {{item}} <br/>
+        </span> -->
+      </h3>
     </div>
   </div>
   <hr>
@@ -108,11 +112,11 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">{{selectedExp.company}} | {{selectedExp.title}} |
-          {{selectedExp.year}}</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">{{selectedExp.Company}} | {{selectedExp.Title}} |
+          {{selectedExp.Year}}</h5>
       </div>
       <div class="modal-body">
-        <div class="alert alert-dark" role="alert" *ngFor="let jd of selectedExp.jd">
+        <div class="alert alert-dark" role="alert" *ngFor="let jd of selectedExp.JobDescription">
           <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
             <use xlink:href="#check-circle-fill" />
           </svg>

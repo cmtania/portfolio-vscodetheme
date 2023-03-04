@@ -51,6 +51,10 @@ details{
     font-family: 'Source Code Pro', monospace;
 }
 
+.company {
+    color: #5057AB;
+}
+
 .company:hover {
     color: #169095;
 }
