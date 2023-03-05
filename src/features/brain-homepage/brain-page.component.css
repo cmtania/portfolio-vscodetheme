@@ -34,7 +34,7 @@
     opacity: 1; /* when the .image-revealed class is applied, set the opacity to 1 to reveal the image */
   }
 
-.line-with-dot {
+.profile {
     position: relative;
     height:20px;
     background-color: rgb(255, 255, 255);
@@ -42,18 +42,51 @@
     top: -167px;
   }
   
-  .line-with-dot::before {
+  .profile::before {
     content: "";
     position: absolute;
     right: -10px;
     top: -2px;
     height: 20px;
     width: 20px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(9, 118, 138);
     border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 14px 8px #ecb347;
   }
 
-::ng-deep .summary .tooltip-inner {
+  .skills {
+    position: relative;
+    height:20px;
+    background-color: rgb(255, 255, 255);
+    right: -98px;
+    top: -30px;
+  }
+  
+  .skills::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(9, 118, 138);
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 14px 8px #ecb347;
+  }
+
+::ng-deep .tooltip-skills .tooltip-inner {
+    background-color: #33FFBD;
+    font-size: 125%;
+    color: black;
+    width: 7rem;
+    height: 2.25rem;
+    right: 50px;
+    top: -67px;
+}
+
+::ng-deep .legend .tooltip-inner {
     background-color: #33FFBD;
     font-size: 125%;
     color: black;
@@ -62,16 +95,20 @@
     right: 100px;
     top: -167px;
 }
-::ng-deep .summary.bs-tooltip-end .tooltip-arrow::before {
+::ng-deep .tooltip-skills.bs-tooltip-end .tooltip-arrow::before,
+::ng-deep .legend.bs-tooltip-end .tooltip-arrow::before {
     border-right-color: #33FFBD;
 }
-::ng-deep .summary.bs-tooltip-start .tooltip-arrow::before {
+::ng-deep .tooltip-skills.bs-tooltip-start .tooltip-arrow::before,
+::ng-deep .legend.bs-tooltip-start .tooltip-arrow::before {
     border-left-color: #33FFBD;
 }
-::ng-deep .summary.bs-tooltip-top .tooltip-arrow::before {
+::ng-deep .tooltip-skills.bs-tooltip-top .tooltip-arrow::before,
+::ng-deep .legend.bs-tooltip-top .tooltip-arrow::before {
     border-top-color: #33FFBD;
 }
-::ng-deep .summary.bs-tooltip-bottom .tooltip-arrow::before {
+::ng-deep .tooltip-skills.bs-tooltip-bottom .tooltip-arrow::before,
+::ng-deep .legend.bs-tooltip-bottom .tooltip-arrow::before {
     border-bottom-color: #33FFBD;
 }
   
