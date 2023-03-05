@@ -1,0 +1,77 @@
+.brain-image {
+    width: 1000px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .brain-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .details,
+  .brain-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.brain-wrapper img {
+    opacity: 0; /* set the initial opacity to 0 to hide the image */
+    transition: opacity 2s ease; /* add a transition for the opacity property */
+  }
+  
+.image-revealed img {
+    opacity: 1; /* when the .image-revealed class is applied, set the opacity to 1 to reveal the image */
+  }
+
+.line-with-dot {
+    position: relative;
+    height:20px;
+    background-color: rgb(255, 255, 255);
+    right: 117px;
+    top: -167px;
+  }
+  
+  .line-with-dot::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -2px;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+  }
+
+::ng-deep .summary .tooltip-inner {
+    background-color: #33FFBD;
+    font-size: 125%;
+    color: black;
+    width: 7rem;
+    height: 2.25rem;
+    right: 100px;
+    top: -167px;
+}
+::ng-deep .summary.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: #33FFBD;
+}
+::ng-deep .summary.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: #33FFBD;
+}
+::ng-deep .summary.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #33FFBD;
+}
+::ng-deep .summary.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #33FFBD;
+}
+  

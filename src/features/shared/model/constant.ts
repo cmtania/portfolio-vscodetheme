@@ -1,5 +1,15 @@
 import { WorkExperience } from "./experience-model";
 
+export const myPersonalDetails =  {
+    FullName: 'Christian Tania',
+    NickName: 'Christian',
+    Email: 'mailto:taniachristian01@gmail.com',
+    Linkedin: 'https://www.linkedin.com/in/taniachristian/',
+    Github: 'https://github.com/cmtania',
+    Twitter: '#',
+    Instagram: 'https://www.instagram.com/guruch4n/',
+    AboutMe: `With 4 years of experience as a Full Stack Developer based here in the Philippines.I've been working with C#, NodeJS, Angular, AWS, REST API, MSSQL, GIT/TFS.`
+};
 export const myProgrammingLanguage = 'C#, JavaScript, Python, SQL';
 export const myFrameworks = 'Angular, NodeJS, ASP.Net MVC, Xamarin';
 export const myCloudPlatforms = 'AWS(Lambda, Serverless, Secrets Manager), Azure DevOps';
@@ -10,7 +20,7 @@ export const experiences: Array<WorkExperience> = [
     {   ExperienceID: 1, 
         Company: "Accenture",
         Year:"April 2020 - PRESENT",
-        Title:"SOFWARE DEVELOPER",
+        Title:"Full Stack Web App Developer",
         JobDescription: ["Manage a team with 6 members.",
             "Develop and maintain software applications using Angular, C#, SQL, AWS (Serverless, Lambda, Secrets Manager)", 
             "Acted as the point of contact for all critical errors for 3 major client projects and reduced the time to fix those critical errors by 14%",

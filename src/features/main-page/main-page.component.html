@@ -1,0 +1,147 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <div class="panel-heading">
+            <h5 class="hithere">hi there! 
+                <i ngbTooltip="Want to see my brain? Click me!" 
+                tooltipClass="see-brain" placement="end" (click)="showBrain()" class="fas fa-brain brain"></i>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row responsive">
+      <div class="col-md-2 col-sm-2 col-xs-2">
+        <img class="me" src="../assets/img/programmer.webp" alt="Avatar" style="width:200px">
+      </div>
+      <div class="col-md-10 col-sm-10 col-xs-10">
+        <h3 class="im">I am {{myFullName}}</h3>
+        
+        <h3 class="my-title">{{currentTitle}}</h3>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="intro">
+          <span style="color: #ffb347">SUMMARY</span>
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="intro">
+            <span style="color: #A5E5A6 "> {{aboutMe}}</span>
+        </h3>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="intro"><span style="color: #ffb347 ">SKILLS</span>
+        </h3>
+      </div>
+      <div class="col-md-12">
+        <h3 class="intro"><span style="color: #5057AB">Programming Languages: </span>
+          <span style="color: #A5E5A6 ">{{skills.ProgrammingLanguages}}</span>
+        </h3>
+        <h3 class="intro"><span style="color: #5057AB">Frameworks: </span>
+          <span style="color: #A5E5A6 ">{{skills.Frameworks}}</span>
+        </h3>
+        <h3 class="intro"><span style="color: #5057AB">Cloud Platforms: </span>
+          <span style="color: #A5E5A6 ">{{skills.CloudPlatforms}}</span>
+        </h3>
+        <h3 class="intro"><span style="color: #5057AB">Frameworks: </span>
+          <span style="color: #A5E5A6 ">{{skills.Frameworks}}</span>
+        </h3>
+        <h3 class="intro"><span style="color: #5057AB">Database: </span>
+          <span style="color: #A5E5A6 ">{{skills.Database}}</span>
+        </h3>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="intro"><span style="color: #ffb347 ">EXPERIENCE</span></h3>
+      </div>
+      <div class="col-md-12">
+        <h3 class="intro" *ngFor="let exp of experiences">
+          <span class="company" style="color: #5057AB"
+          ngbTooltip="Click me!" tooltipClass="clickme"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop" style="cursor:pointer" (click)="view(exp.ExperienceID, 1)">{{exp.Title}},</span>
+          <span style="color: #63AFA0"> {{exp.Company}}, {{exp.Year}}</span>
+          <br/>
+          <!-- <span style="color: #A5E5A6" *ngFor="let item of exp.jd">
+            {{item}} <br/>
+          </span> -->
+        </h3>
+      </div>
+    </div>
+  
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="intro"><span style="color: #ffb347 ">FREELANCE</span></h3>
+      </div>
+      <div class="col-md-12">
+        <h3 class="intro" *ngFor="let exp of freelances">
+          <span class="company" style="color: #5057AB" 
+          ngbTooltip="Click me!" tooltipClass="clickme"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop" style="cursor:pointer" (click)="view(exp.ExperienceID, 2)">{{exp.Title}},</span>
+          <span style="color: #63AFA0"> {{exp.Company}} {{exp.Year}}</span>
+          <!-- <span style="color: #A5E5A6" *ngFor="let item of exp.jd">
+            {{item}} <br/>
+          </span> -->
+        </h3>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="contactme">
+          <a class="socials" href="{{myPersonalDetails.Github}}" target="_blank"> <i class="fab fa-github"></i></a>&nbsp;
+          <a class="socials" href="{{myPersonalDetails.Linkedin}}" target="_blank"><i class="fab fa-linkedin"></i></a>&nbsp;
+          <a class="socials" href="{{myPersonalDetails.Twitter}}" target="_blank"><i class="fab fa-twitter"></i></a>&nbsp;
+          <a class="socials" href="{{myPersonalDetails.Email}}" target="_blank"><i class="fas fa-envelope"></i></a>&nbsp;
+          <a class="socials" href="{{myPersonalDetails.Instagram}}" target="_blank"><i class="fab fa-instagram"></i></a>
+        </h3>
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">{{selectedExp.Company}} | {{selectedExp.Title}} |
+            {{selectedExp.Year}}</h5>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-dark" role="alert" *ngFor="let jd of selectedExp.JobDescription">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+              <use xlink:href="#check-circle-fill" />
+            </svg>
+            {{jd}}
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+      <path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+    </symbol>
+  </svg>

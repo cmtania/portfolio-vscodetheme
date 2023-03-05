@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@500&family=Mitr&family=Source+Code+Pro:wght@400;500&display=swap');
+
+.hithere{
+    padding-top: 3%;
+    font-family: 'Source Code Pro', monospace;
+    color: #C1E1C1;
+}
+
+.im{
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    font-family: 'Mitr', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #AF7063;
+    margin-top: 2rem;
+}
+.me{
+    border-radius: 50%;
+}
+.intro{
+    font-family: 'Source Code Pro', monospace;
+  
+}
+
+.logos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+details{
+    cursor: pointer;
+}
+
+.alert {
+    color: #C2BEBE;
+    background-color: #634545;
+    border-color: transparent;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.close {
+    background-color: #171010;
+    color: #AB5050;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    font-family: 'Mitr', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.company {
+    color: #5057AB;
+}
+
+.company:hover {
+    color: #169095;
+}
+
+.socials {
+    background-color: transparent;
+    border: 1px solid #33FFBD;
+    border-radius: 50%;
+    color: #AF7063;
+    display: inline-block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 2.85714;
+    position: relative;
+    text-align: center;
+    width: 40px;
+}
+
+.contactme {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #AF7063;
+}
+
+.my-title {
+    color: #AF7063;
+}
+
+
+::ng-deep .clickme .tooltip-inner {
+    background-color: #33FFBD;
+    font-size: 125%;
+    color: black;
+    width: 7rem;
+    height: 2.25rem;
+}
+::ng-deep .clickme.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: #33FFBD;
+}
+::ng-deep .clickme.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: #33FFBD;
+}
+::ng-deep .clickme.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #33FFBD;
+}
+::ng-deep .clickme.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #33FFBD;
+}
+
+
+::ng-deep .see-brain .tooltip-inner {
+    background-color: #33FFBD;
+    font-size: 125%;
+    color: black;
+    width: 20rem;
+    height: 4rem;
+}
+
+::ng-deep .see-brain.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: #33FFBD;
+}
+::ng-deep .see-brain.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: #33FFBD;
+}
+::ng-deep .see-brain.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #33FFBD;
+}
+::ng-deep .see-brain.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #33FFBD;
+}
+
+.brain{
+    cursor: pointer;
+}
+
+.brain:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
