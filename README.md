@@ -1,20 +1,18 @@
-# Portfolio - Visual Studio Code Theme
+# Portfolio - Created a web app portfolio based on coding syntax.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 # I use Angular 12 with bootstrap 5.
 
-## Actual Portfolio
-![Screenshot](portfolio-vscodetheme1.png)
+It's still work in progress.
 
-## Hover the company name then click to view details
-![Screenshot](portfolio-vscodetheme2.png)
+Live demo here: [Christian's Portfolio - Angular]( https://cmtania.github.io/portfolio-vscodetheme/)
 
-## Experience Details
-![Screenshot](portfolio-vscodetheme3.png)
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. 
+Navigate to `http://localhost:4200/`.
+The app will automatically reload if you change any of the source files.
 
 ## Open for improvement for my vs code theme portfolio. Thanks!
 
